@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #main{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card{
+            padding: 1rem;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+        .card img{
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        section{
+            display: flex;
+            gap:1rem;
+            padding: 1rem;
+        }
+        aside{
+            width: 20%;
+            border-right: 1px solid #1f1f1f;
+            padding: 1rem;
+        }
+        .input{
+            padding: 10px;
+            border-radius: 0.5rem;
+            outline: none;
+            border-right: 1rem solid #3e3e3e;
+        }
+    </style>
+    <section>
+        <aside>
+            <input id="searchInput" class="input" type="text" placeholder="search">
+            <button class="input" onclick="search()">search</button>
+            <input class="input" type="number" id="minPrice" placeholder="Минимальная цена">
+            <input class="input" type="number" id="maxPrice" placeholder="Максимальная цена">
+            <button onclick="filterByPrice()">filter</button>
+        </aside>
+        <div id="main"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
